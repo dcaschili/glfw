@@ -20,7 +20,7 @@ project "GLFW"
     filter "system:Windows"
         defines "_GLFW_WIN32"
 
-function UseGLFW()
-    includedirs "include"
-    links       "GLFW"
-end
+    function UseGLFW(thirdPartiesPath)
+        includedirs (thirdPartiesPath .. "GLFW/include")
+        links       "GLFW"
+    end
