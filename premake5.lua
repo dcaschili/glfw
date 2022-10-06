@@ -6,6 +6,10 @@ project "GLFW"
     objdir      (ThirdPartiesObjDir)
     includedirs "include"
 
+    defines{
+        "_CRT_SECURE_NO_WARNINGS"
+    }
+
     files {
         "include/GLFW/*.h",
         "src/*.h",
